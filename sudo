@@ -1,0 +1,1 @@
+SUBSYSTEM=="tty", ATTRS{serial}=="FT6Z5N1W", ENV{ID_MM_DEVICE_IGNORE}="1", ATTR{device/latency_timer}="1", SYMLINK+="ttyDXL_master_right"

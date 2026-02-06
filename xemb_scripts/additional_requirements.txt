@@ -1,0 +1,4 @@
+evdev==1.9.0
+python-uinput==1.0.1
+modern_robotics==1.1.1
+IPython

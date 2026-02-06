@@ -1,0 +1,42 @@
+#define PUL 7
+#define DIR 6
+#define ENA 5
+
+bool keepStepping = false;
+
+void setup() {
+  pinMode(PUL, OUTPUT);
+  pinMode(DIR, OUTPUT);
+  pinMode(ENA, OUTPUT);
+  digitalWrite(ENA, LOW); // Enable driver
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available()) {
+    char cmd = Serial.read();
+
+    if (cmd == 'f') {
+      digitalWrite(DIR, HIGH);
+      keepStepping = true;
+    } else if (cmd == 'b') {
+      digitalWrite(DIR, LOW);
+      keepStepping = true;
+    } else if (cmd == 'x') {
+      keepStepping = false;
+    } else if (cmd == 'e') {
+      digitalWrite(ENA, LOW);
+    } else if (cmd == 's') {
+      digitalWrite(ENA, HIGH);
+    }
+  }
+
+  if (keepStepping) {
+    digitalWrite(PUL, HIGH);
+    delayMicroseconds(150);
+    digitalWrite(PUL, LOW);
+    delayMicroseconds(150);
+  }
+}
+

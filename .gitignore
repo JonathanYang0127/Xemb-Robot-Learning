@@ -1,0 +1,21 @@
+*.pyc
+
+# Large SDK packages and documentation
+piperx_control/vision_system/libMediaSDK-dev-*/
+piperx_control/vision_system/Vuer/
+
+# Runtime files
+*.log
+*.pid
+*.h264
+
+# Large binary files (but allow essential SDK libraries)
+*.deb
+piperx_control/vision_system/CameraSDK-*/lib/*.so
+*.splat
+*.glb
+*.webm
+
+# Temporary files
+.DS_Store
+*~

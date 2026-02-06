@@ -1,0 +1,2 @@
+modern_robotics==1.1.1
+IPython 
