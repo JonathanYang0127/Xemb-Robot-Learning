@@ -1,15 +1,8 @@
-# ALOHA: A Low-cost Open-source Hardware System for Bimanual Teleoperation
-
-#### Project Website: https://tonyzhaozh.github.io/aloha/
-
-This codebase contains implementation for teleoperation and data collection with the ALOHA hardware.
-To build ALOHA, follow the [Hardware Assembly Tutorial](https://docs.google.com/document/d/1sgRZmpS7HMcZTPfGy3kAxDrqFMtNNzmK-yVtX5cKYME/edit?usp=sharing) and the quick start guide below.
-To train imitation learning algorithms, you would also need to install [ACT](https://github.com/tonyzhaozh/act).
+# Xemb Robot Learning
 
 ### Repo Structure
 - ``config``: a config for each robot, designating the port they should bind to, more details in quick start guide.
 - ``launch``: a ROS launch file for all 4 cameras and all 4 robots.
-- ``aloha_scripts``: python code for teleop and data collection
 
 ## Quick start guide
 
